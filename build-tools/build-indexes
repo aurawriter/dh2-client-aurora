@@ -12,12 +12,12 @@ process.chdir(rootDir);
 const debug = true;
 
 process.stdout.write("Syncing data from Git repository... ");
-if (!fs.existsSync('DH2')) {
+/* if (!fs.existsSync('DH2')) {
 	child_process.execSync('git clone ' + server_repo + ' DH2', {
 	});
 	child_process.execSync("git pull " + server_repo, {cwd: 'DH2'});
 }
-
+*/
 if(!fs.existsSync('DH2')) child_process.execSync('git clone ' + server_repo + 'DH2');
 else child_process.execSync("git pull " + server_repo, {cwd:'DH2'});
 
