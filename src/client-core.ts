@@ -213,7 +213,7 @@ const PSBackground = new class extends PSStreamModel {
 			if (location.host === 'smogtours.psim.us') {
 				bgid = 'shaymin';
 			} else if (location.host === Config.routes.client) {
-				const bgs = ['horizon', 'ocean', 'waterfall', 'shaymin', 'charizards'];
+				const bgs = ['horizon', 'ocean', 'waterfall', 'shaymin', 'charizards','minior'];
 				bgid = bgs[Math.floor(Math.random() * 5)];
 				if (bgid === this.curId) bgid = bgs[Math.floor(Math.random() * 5)];
 			}
@@ -306,6 +306,20 @@ const PSBackground = new class extends PSStreamModel {
 				url: 'https://seiryuuden.deviantart.com/art/The-Ultimate-Mega-Showdown-Charizards-414587079',
 				title: 'Charizards',
 				artist: 'Jessica Valencia',
+			};
+			break;
+		case 'minior':
+			menuColors = [
+				"82.8169014084507,34.63414634146342%",
+				"216.16438356164383,29.55465587044534%",
+				"212.92682926829266,59.42028985507245%",
+				"209.18918918918916,57.51295336787566%",
+				"199.2857142857143,48.275862068965495%",
+				"213.11999999999998,55.06607929515419%",
+			];
+			attrib = {
+				title: 'Minior',
+				artist: 'AprilMayCry',
 			};
 			break;
 		case 'digimon':
