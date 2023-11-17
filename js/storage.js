@@ -53,7 +53,7 @@ Storage.bg = {
 			if (location.host === 'smogtours.psim.us') {
 				bgid = 'shaymin';
 			} else if (location.host === Config.routes.client) {
-				bgid = ['horizon', 'ocean', 'waterfall', 'shaymin', 'charizards', 'psday'][Math.floor(Math.random() * 6)];
+				bgid = ['horizon', 'ocean', 'waterfall', 'shaymin', 'charizards', 'psday','minior'][Math.floor(Math.random() * 7)];
 			} else {
 				$(document.body).css({
 					background: '',
@@ -109,6 +109,10 @@ Storage.bg = {
 			case 'psday':
 				hues = ["24.705882352941174,25.37313432835821%", "260.4651162790697,59.44700460829492%", "165.3191489361702,46.07843137254901%", "16.363636363636367,42.63565891472869%", "259.04761904761904,34.05405405405405%", "24.705882352941174,25.37313432835821%"];
 				attrib = 'Pok&eacute;mon Showdown Day background <small>by LifeisDANK</small>';
+				break;
+			case 'minior':
+				hues = ["82.8169014084507,34.63414634146342%", "216.16438356164383,29.55465587044534%", "212.92682926829266,59.42028985507245%", "209.18918918918916,57.51295336787566%", "199.2857142857143,48.275862068965495%", "213.11999999999998,55.06607929515419%"];
+				attrib = '<a href="https://quanyails.deviantart.com/art/Sunrise-Ocean-402667154" target="_blank" class="subtle">"Sunrise Ocean" <small>background by Quanyails</small></a>';
 				break;
 			case 'digimon':
 				hues = ["170.45454545454544,27.500000000000004%", "84.70588235294119,13.821138211382115%", "112.50000000000001,7.8431372549019605%", "217.82608695652175,54.761904761904766%", "0,1.6949152542372816%", ""];
