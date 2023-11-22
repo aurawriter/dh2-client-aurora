@@ -21,7 +21,7 @@ process.stdout.write("Syncing data from Git repository... ");
 if(!fs.existsSync('DH2')) child_process.execSync('git clone ' + server_repo + ' DH2');
 else child_process.execSync("git pull " + server_repo, {cwd:'DH2'});
 
-child_process.execSync('npm run build', {cwd: 'DH2'});
+child_process.execSync('npm run build', {cwd: 'caches/DH2'});
 
 console.log("DONE");
 
