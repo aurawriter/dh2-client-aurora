@@ -742,6 +742,9 @@ class BattleTooltips {
 			if (move.flags.pulse && ability === 'megalauncher') {
 				text += `<p class="movetag">&#x2713; Pulse <small>(boosted by Mega Launcher)</small></p>`;
 			}
+			if (move.flags.bullet && ability === 'megalauncher') {
+				text += `<p class="movetag">&#x2713; Bullet-like <small>(boosted by Mega Launcher)</small></p>`;
+			}
 			if (move.flags.bite && ability === 'strongjaw') {
 				text += `<p class="movetag">&#x2713; Bite <small>(boosted by Strong Jaw)</small></p>`;
 			}
