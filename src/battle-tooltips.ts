@@ -1531,6 +1531,7 @@ class BattleTooltips {
 					if (value.abilityModify(0, 'Galvanize')) moveType = 'Electric';
 					if (value.abilityModify(0, 'Pixilate')) moveType = 'Fairy';
 					if (value.abilityModify(0, 'Refrigerate')) moveType = 'Ice';
+					if (value.abilityModify(0, 'Illuminate')) moveType = 'Light';
 				}
 				if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
 			}
