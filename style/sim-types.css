@@ -418,7 +418,7 @@
 	/* bg: 97 to 90, border: 70 */
 	background: hsl(38,65%,85%);
 	background: linear-gradient(to bottom,  hsl(38,65%,85%),  hsl(0,0%,100%));
-	border-color: hsl(40,100%,96%);
+	border-color: hsl(39,29%,77%);
 }
 .movemenu button.type-Light small {
 	color: hsl(38,65%,85%);
