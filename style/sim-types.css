@@ -400,7 +400,7 @@
 	border-color: hsl(252,36%,39%);
 }
 .movemenu button.type-Cosmic small {
-	color: hsl(190,100%,61%);
+	color: hsl(222,29%,93%);
 }
 .movemenu button.type-Cosmic:hover {
 	/* bg: 95 to 83, border: 41 */
@@ -421,7 +421,7 @@
 	border-color: hsl(39,29%,77%);
 }
 .movemenu button.type-Light small {
-	color: hsl(38,65%,85%);
+	color: hsl(285,2%,31%);
 }
 .movemenu button.type-Light:hover {
 	/* bg: 95 to 83, border: 41 */
