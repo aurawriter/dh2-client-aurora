@@ -479,7 +479,10 @@ License: GPLv2
 	background: #DDAAEE url(../fx/weather-wonderroom.png) no-repeat scroll left top;
 	color: #661155;
 }
-
+.pollenweather {
+	background: #FEFCF8 url(../fx/weather-pollen.png) no-repeat scroll left top;
+	color: #FEFCF8;
+}
 .battle .result {
 	display: none;
 	position: absolute;
