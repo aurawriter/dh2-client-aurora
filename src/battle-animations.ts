@@ -927,6 +927,7 @@ export class BattleScene implements BattleSceneStub {
 				deltastream: 'Strong Winds',
 				pollen: 'Pollen',
 				acidrain: 'Acid Rain',
+				gravity: 'Gravity',
 			};
 			weatherhtml = `${weatherNameTable[this.battle.weather] || this.battle.weather}`;
 			if (this.battle.weatherMinTimeLeft !== 0) {
