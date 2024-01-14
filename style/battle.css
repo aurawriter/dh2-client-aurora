@@ -480,7 +480,11 @@ License: GPLv2
 	color: #661155;
 }
 .pollenweather {
-	background: #99BBFF url(../fx/weather-pollen.png) no-repeat scroll left top;
+	background: #CCEEAA url(../fx/weather-pollen.png) no-repeat scroll left top;
+	color: #0044BB;
+}
+.acidrainweather {
+	background: #CCEEAA url(../fx/weather-acidrain.png) no-repeat scroll left top;
 	color: #0044BB;
 }
 .battle .result {
