@@ -459,8 +459,12 @@ License: GPLv2
 	background: #CCEEAA url(../fx/weather-grassyterrain.png) no-repeat scroll left top;
 	color: #335511;
 }
-.psychicterrainweather {
-	background: #CCAAEE url(../fx/weather-psychicterrain.png) no-repeat scroll left top;
+.hauntedterrainweather {
+	background: #CCEEAA url(../fx/weather-hauntedterrain.png) no-repeat scroll left top;
+	color: #335511;
+}
+.draconicterrainweather {
+	background: #CCAAEE url(../fx/weather-draconicterrain.png) no-repeat scroll left top;
 	color: #441155;
 }
 .gravityweather {
