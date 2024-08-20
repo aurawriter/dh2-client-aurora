@@ -604,7 +604,6 @@ function buildTeambuilderTables() {
 			BattleTeambuilderTable['gen9aurora'].overrideTier = overrideTier;
 			BattleTeambuilderTable['gen9aurora'].monotypeBans = monotypeBans;
 			BattleTeambuilderTable['gen9aurora'].formatSlices = formatSlices;
-		}
 		} else if (isBDSP && !isDoubles) {
 			BattleTeambuilderTable['gen8bdsp'] = {};
 			BattleTeambuilderTable['gen8bdsp'].learnsets = {};
