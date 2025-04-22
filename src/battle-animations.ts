@@ -1333,6 +1333,58 @@ export class BattleScene implements BattleSceneStub {
 				tspikeArray.push(tspike2);
 			}
 			break;
+		case 'tastytreats':
+			let treatsArray = this.sideConditions[siden]['tastytreats'];
+			if (!treatsArray) {
+				treatsArray = [];
+				this.sideConditions[siden]['tastytreats'] = treatsArray;
+			}
+			let treatLevels = this.battle.sides[siden].sideConditions['tastytreats'][1];
+			if (treatsArray.length < 1 && treatLevels >= 1) {
+				const treat1 = new Sprite(BattleEffects.candy, {
+					display: 'block',
+					x: x + 5,
+					y: y - 40,
+					z: side.z,
+					scale: 0.3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(treat1.$el!);
+				treatsArray.push(treat1);
+			}
+			if (treatsArray.length < 2 && treatLevels >= 2) {
+				const treat2 = new Sprite(BattleEffects.candy, {
+					display: 'block',
+					x: x - 15,
+					y: y - 35,
+					z: side.z,
+					scale: .3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(treat2.$el!);
+				treatsArray.push(treat2);
+			}
+			if (treatsArray.length < 3 && treatLevels >= 3) {
+				const treat3 = new Sprite(BattleEffects.candy, {
+					display: 'block',
+					x: x + 50,
+					y: y - 40,
+					z: side.z,
+					scale: .3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(treat3.$el!);
+				treatsArray.push(treat3);
+			}
+			if (treatsArray.length < 4 && treatLevels >= 4) {
+				const treat4 = new Sprite(BattleEffects.candy, {
+					display: 'block',
+					x: x + 10,
+					y: y - 30,
+					z: side.z,
+					scale: .3,
+				}, this);
+				this.$spritesFront[spriteIndex].append(treat4.$el!);
+				treatsArray.push(treat4);
+			}
+			break;
 		case 'stickyweb':
 			const web = new Sprite(BattleEffects.web, {
 				display: 'block',
