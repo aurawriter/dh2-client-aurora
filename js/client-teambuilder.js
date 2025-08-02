@@ -2145,7 +2145,6 @@
 				case 'Cherrim':
 				case 'Deerling':
 				case 'Flabebe':
-				case 'Floette':
 				case 'Florges':
 				case 'Furfrou':
 				case 'Gastrodon':
