@@ -20,8 +20,8 @@ Config.whitelist = [
 Config.defaultserver = {
 	id: 'dragonheaven',
 	//host: '191.101.232.116',
-	host: '51.81.209.222',
-	port: 8000,
+	host: 'api.aurorashowdown.com',
+	port: 443,
 	httpport: 80,
 	altport: 80,
 	registered: true
