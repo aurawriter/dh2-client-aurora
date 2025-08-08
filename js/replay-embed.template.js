@@ -28,30 +28,30 @@ function requireScript(url) {
 	document.head.appendChild(scriptEl);
 }
 
-linkStyle('http://51.81.209.222/style/font-awesome.css?');
-linkStyle('http://51.81.209.222/style/battle.css?a7');
-linkStyle('http://51.81.209.222/style/replay.css?a7');
-linkStyle('http://51.81.209.222/style/utilichart.css?a7');
+linkStyle('https://aurorashowdown.com/style/font-awesome.css?');
+linkStyle('https://aurorashowdown.com/style/battle.css?a7');
+linkStyle('https://aurorashowdown.com/style/replay.css?a7');
+linkStyle('https://aurorashowdown.com/style/utilichart.css?a7');
 
-requireScript('http://51.81.209.222/js/lib/ps-polyfill.js');
-requireScript('http://51.81.209.222/config/config.js?a7');
-requireScript('http://51.81.209.222/js/lib/jquery-1.11.0.min.js');
-requireScript('http://51.81.209.222/js/lib/lodash.compat.js');
-requireScript('http://51.81.209.222/js/lib/html-sanitizer-minified.js');
-requireScript('http://51.81.209.222/js/battle-sound.js');
-requireScript('http://51.81.209.222/js/battledata.js?a7');
-requireScript('http://51.81.209.222/data/pokedex-mini.js?a7');
-requireScript('http://51.81.209.222/data/pokedex-mini-bw.js?a7');
-requireScript('http://51.81.209.222/data/graphics.js?a7');
-requireScript('http://51.81.209.222/data/pokedex.js?a7');
-requireScript('http://51.81.209.222/data/moves.js?a7');
-requireScript('http://51.81.209.222/data/abilities.js?a7');
-requireScript('http://51.81.209.222/data/items.js?a7');
-requireScript('http://51.81.209.222/data/teambuilder-tables.js?a7');
-requireScript('http://51.81.209.222/data/mod-sprites.js?a7');
-requireScript('http://51.81.209.222/data/mod-config.js?a7');
-requireScript('http://51.81.209.222/js/battle-tooltips.js?a7');
-requireScript('http://51.81.209.222/js/battle.js?a7');
+requireScript('https://aurorashowdown.com/js/lib/ps-polyfill.js');
+requireScript('https://aurorashowdown.com/config/config.js?a7');
+requireScript('https://aurorashowdown.com/js/lib/jquery-1.11.0.min.js');
+requireScript('https://aurorashowdown.com/js/lib/lodash.compat.js');
+requireScript('https://aurorashowdown.com/js/lib/html-sanitizer-minified.js');
+requireScript('https://aurorashowdown.com/js/battle-sound.js');
+requireScript('https://aurorashowdown.com/js/battledata.js?a7');
+requireScript('https://aurorashowdown.com/data/pokedex-mini.js?a7');
+requireScript('https://aurorashowdown.com/data/pokedex-mini-bw.js?a7');
+requireScript('https://aurorashowdown.com/data/graphics.js?a7');
+requireScript('https://aurorashowdown.com/data/pokedex.js?a7');
+requireScript('https://aurorashowdown.com/data/moves.js?a7');
+requireScript('https://aurorashowdown.com/data/abilities.js?a7');
+requireScript('https://aurorashowdown.com/data/items.js?a7');
+requireScript('https://aurorashowdown.com/data/teambuilder-tables.js?a7');
+requireScript('https://aurorashowdown.com/data/mod-sprites.js?a7');
+requireScript('https://aurorashowdown.com/data/mod-config.js?a7');
+requireScript('https://aurorashowdown.com/js/battle-tooltips.js?a7');
+requireScript('https://aurorashowdown.com/js/battle.js?a7');
 
 var Replays = {
 	battle: null,
