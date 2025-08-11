@@ -1677,6 +1677,11 @@ class BattleMoveSearch extends BattleTypedSearch<'move'> {
 			return species.baseStats.spe <= 100;
 		case 'wildcharge':
 			return !moves.includes('supercellslam');
+		case 'lightspeed': case 'dazzledart': case 'eternallight': case 'flashheal': case 'holyfire': case 'lightgeyser': 
+		case 'wormholewarp': case 'asteroidslam': case 'radiantshield': case 'asteroidbelt': case 'strobelight': 
+		case 'reboundshot': case 'shuttleloop': case 'jawbreaker': case 'doublecross': case 'hydrotherapy': case 'frostbite':
+		case 'fanout': case 'tastytreats': case 'stellarwish': case 'reckoning':
+			return true;
 		}
 
 		if (this.formatType === 'doubles' && BattleMoveSearch.GOOD_DOUBLES_MOVES.includes(id)) {
