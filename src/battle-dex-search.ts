@@ -405,7 +405,7 @@ class DexSearch {
 			if (topbufIndex < 0 && searchTypeIndex < 2 && passType === 'alias' && !bufs[1].length && bufs[2].length) {
 				topbufIndex = 2;
 			}
-						console.log("All keys in BattleTypeChart:", Object.keys(window.BattleTypeChart));
+						
 						// determine if the element comes from the current mod
 						const table = BattleTeambuilderTable[window.room.curTeam.mod];
 						if (
@@ -425,8 +425,8 @@ class DexSearch {
 							(!table || !table.overrideAbilityDesc || id in table.overrideAbilityDesc === false)
 						) continue;
 						else if (
-							typeIndex === 2 && (id.replace(id.charAt(0), id.charAt(0).toUpperCase()) in window.BattleTypeChart) === false &&
-							(!table || (id.replace(id.charAt(0), id.charAt(0).toUpperCase()) in table.overrideTypeChart) === false)
+							typeIndex === 2 && (id.replace(id.charAt(0), id.charAt(0).toLowerCase()) in window.BattleTypeChart === false &&
+							(!table || (id.replace(id.charAt(0), id.charAt(0).toLowerCase()) in table.overrideTypeChart === false)
 						) continue;
 
 			if (illegal && typeIndex === searchTypeIndex) {
