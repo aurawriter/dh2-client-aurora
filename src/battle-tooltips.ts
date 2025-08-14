@@ -1958,7 +1958,7 @@ class BattleTooltips {
 		if (move.flags['bite']) {
 			value.abilityModify(1.25, "Ferocity");
 		}
-		if (move.flags['drain']) {
+		if (move.drain != null) {
 			value.abilityModify(1.5, "Vampiric");
 		}
 		if (move.priority > 1) {
