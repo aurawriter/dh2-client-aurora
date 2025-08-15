@@ -1133,7 +1133,7 @@ class BattleTooltips {
 			if (ability === 'slushrush' && (weather === 'hail' || weather === 'snow')) {
 				speedModifiers.push(2);
 			}
-		   if (ability === 'alpinetraining' && (weather === 'hail || weather === 'snow')) {
+		   if (ability === 'alpinetraining' && (weather === 'hail' || weather === 'snow')) {
 				stats.spa = Math.floor(stats.spa * 1.5);
 				stats.atk = Math.floor(stats.atk * 1.5);
 			}
