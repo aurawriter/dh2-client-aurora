@@ -1121,7 +1121,7 @@ class BattleTooltips {
 			if (ability === 'sandrush' && weather === 'sandstorm') {
 				speedModifiers.push(2);
 			}
-			if (ability === 'antigrav' && weather === 'gravity) {
+			if (ability === 'antigrav' && weather === 'gravity') {
 				speedModifiers.push(2);
 			}
 			if (ability === 'sandveil' && weather === 'sandstorm'){
