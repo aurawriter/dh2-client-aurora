@@ -1127,7 +1127,7 @@ class BattleTooltips {
 			if (ability === 'sandveil' && weather === 'sandstorm'){
 				stats.def = Math.floor(stats.def * 1.2);
 			}
-			if (ability === 'snowcloak' && (weather === 'hail' || weather === 'snow)) {
+			if (ability === 'snowcloak' && (weather === 'hail' || weather === 'snow')) {
 				stats.spd = Math.floor(stats.spd * 1.2);
 			}
 			if (ability === 'slushrush' && (weather === 'hail' || weather === 'snow')) {
