@@ -1540,7 +1540,16 @@ export class Battle {
 						pp += 1;
 					}
 				}
-			}
+				if(this.hasPseudoWeather('Haunted Terrain')) {
+					const isGrounded = pokemon.isGrounded();
+					const hasDragonBlessing = pokemon.effectiveAbility() === 'Dragon Blessing';
+					if ((isGrounded || hasDragonBlessing)) {
+						pp += 1;
+					}
+				}
+				if (pokemon.status === 'par') {
+					pp += 1;
+				}
 			if (!callerMoveForPressure) {
 				pokemon.rememberMove(moveName, pp);
 			} else {
