@@ -760,6 +760,9 @@ class BattleTooltips {
 			if (move.flags.wind) {
 				text += `<p class="movetag">&#x2713; Wind <small>(activates Wind Power and Wind Rider)</small></p>`;
 			}
+			if (move.flags.kick) {
+				text += `<p class = "movetag">&#x2713; Kick <small>(boosted by Deadly Kicks)</small></p>`;	
+			}
 		}
 		return text;
 	}
@@ -1118,8 +1121,21 @@ class BattleTooltips {
 			if (ability === 'sandrush' && weather === 'sandstorm') {
 				speedModifiers.push(2);
 			}
+			if (ability === 'antigrav' && weather === 'gravity') {
+				speedModifiers.push(2);
+			}
+			if (ability === 'sandveil' && weather === 'sandstorm'){
+				stats.def = Math.floor(stats.def * 1.2);
+			}
+			if (ability === 'snowcloak' && (weather === 'hail' || weather === 'snow')) {
+				stats.spd = Math.floor(stats.spd * 1.2);
+			}
 			if (ability === 'slushrush' && (weather === 'hail' || weather === 'snow')) {
 				speedModifiers.push(2);
+			}
+		   if (ability === 'alpinetraining' && (weather === 'hail' || weather === 'snow')) {
+				stats.spa = Math.floor(stats.spa * 1.5);
+				stats.atk = Math.floor(stats.atk * 1.5);
 			}
 			if (item !== 'utilityumbrella') {
 				if (weather === 'sunnyday' || weather === 'desolateland') {
@@ -1128,6 +1144,9 @@ class BattleTooltips {
 					}
 					if (ability === 'solarpower') {
 						stats.spa = Math.floor(stats.spa * 1.5);
+					}
+					if (ability === 'heathaze') {
+						stats.spd = Math.floor(stats.spd * 1.2);
 					}
 					if (ability === 'orichalcumpulse') {
 						stats.atk = Math.floor(stats.atk * 1.3);
@@ -1146,6 +1165,11 @@ class BattleTooltips {
 				}
 				if (weather === 'raindance' || weather === 'primordialsea') {
 					if (ability === 'swiftswim') {
+						speedModifiers.push(2);
+					}
+				}
+				if (weather === 'pollen') {
+					if (ability === 'honeygather') {
 						speedModifiers.push(2);
 					}
 				}
@@ -1193,12 +1217,23 @@ class BattleTooltips {
 		if (ability === 'weirdpower' && this.battle.hasPseudoWeather('Psychic Terrain')){
 			stats.spa = Math.floor(stats.spa * 1.5);
 		}
+		if (ability === 'overcharge' && this.battle.hasPseudoWeather('Electric Terrain')){
+			stats.spa = Math.floor(stats.atk * 1.5);
+		}
+		if (ability === 'candycrush' && this.battle.hasPseudoWeather('Misty Terrain')){
+			stats.atk = Math.floor(stats.atk * 2);
+		}
 		if (this.battle.hasPseudoWeather('Electric Terrain')) {
 			if (ability === 'surgesurfer') {
 				speedModifiers.push(2);
 			}
 			if (ability === 'hadronengine') {
 				stats.spa = Math.floor(stats.spa * 1.3);
+			}
+		}
+		if (this.battle.hasPseudoWeather('Draconic Terrain')) {
+			if (ability === 'dragonblessing') {
+				speedModifiers.push(2);
 			}
 		}
 		if (item === 'choicespecs' && !clientPokemon?.volatiles['dynamax']) {
@@ -1535,6 +1570,11 @@ class BattleTooltips {
 					if (value.abilityModify(0, 'Pixilate')) moveType = 'Fairy';
 					if (value.abilityModify(0, 'Refrigerate')) moveType = 'Ice';
 					if (value.abilityModify(0, 'Illuminate')) moveType = 'Light';
+					if (value.abilityModify(0, 'Dragonheart')) moveType = 'Dragon';
+					if (value.abilityModify(0, 'Mind Over Matter') && this.battle.hasPseudoWeather('Psychic Terrain')) moveType = Psychic;
+				}
+				if (moveType === 'Fighting') {
+					if (value.abilityModify(0, 'Fiery Fists')) moveType = 'Fire';
 				}
 				if (value.abilityModify(0, 'Normalize')) moveType = 'Normal';
 			}
@@ -1900,6 +1940,9 @@ class BattleTooltips {
 		if (['Rock', 'Ground', 'Steel'].includes(moveType) && this.battle.weather === 'sandstorm') {
 			if (value.tryAbility("Sand Force")) value.weatherModify(1.3, "Sandstorm", "Sand Force");
 		}
+		if (this.battle.weather === 'raindance') {
+			if (value.tryAbility("Film Noir")) value.weatherModify(1.2, "Rain", "Film Noir");
+		}
 		if (move.secondaries) {
 			value.abilityModify(1.3, "Sheer Force");
 		}
@@ -1911,6 +1954,18 @@ class BattleTooltips {
 		}
 		if (move.flags['slicing']) {
 			value.abilityModify(1.5, "Sharpness");
+		}
+		if (move.flags['kick']) {
+			value.abilityModify(1.2, "Deadly Kicks");
+		}
+		if (move.flags['bite']) {
+			value.abilityModify(1.25, "Ferocity");
+		}
+		if (move.drain != null) {
+			value.abilityModify(1.5, "Vampiric");
+		}
+		if (move.priority > 1) {
+			value.abilityModify(1.2, "Swift Strike");
 		}
 		for (let i = 1; i <= 5 && i <= pokemon.side.faintCounter; i++) {
 			if (pokemon.volatiles[`fallen${i}`]) {
@@ -1937,6 +1992,9 @@ class BattleTooltips {
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Galvanize");
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Pixilate");
 				value.abilityModify(this.battle.gen > 6 ? 1.2 : 1.3, "Refrigerate");
+			}
+			if (move.type === 'Fighting') {
+				value.abilityModify(1.2, "Fiery Fists");
 			}
 			if (this.battle.gen > 6) {
 				value.abilityModify(1.2, "Normalize");
