@@ -270,6 +270,10 @@ License: GPLv2
 	background: #AA77AA;
 	color: #FFFFFF;
 }
+.statbar span.dsy {
+		background: #AA77AA;
+		color: #FFFFFF;
+	}
 .statbar span.fbt {
 	background: #009AA4;
 	color: #FFFFFF;

@@ -1612,6 +1612,9 @@ export class Battle {
 		case 'fbt':
 			this.scene.resultAnim(pokemon, 'Frozen', 'frz');
 			break;
+		case 'dsy':
+			this.scene.resultAnim(pokemon, 'Asleep', 'slp');
+			break;
 		case 'slp':
 			this.scene.resultAnim(pokemon, 'Asleep', 'slp');
 			pokemon.statusData.sleepTurns++;
