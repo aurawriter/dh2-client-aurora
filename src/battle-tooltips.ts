@@ -1434,6 +1434,9 @@ class BattleTooltips {
 		if (move.id === 'judgment' && item.onPlate && !item.zMoveType) {
 			if (value.itemModify(0)) moveType = item.onPlate;
 		}
+		if (move.id === 'essenceburst' && item.onEssence) {
+			if (value.itemModify(0)) moveType = item.onEssence;
+		}
 		if (move.id === 'technoblast' && item.onDrive) {
 			if (value.itemModify(0)) moveType = item.onDrive;
 		}

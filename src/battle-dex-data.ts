@@ -1190,6 +1190,7 @@ class Item implements Effect {
 	readonly onPlate: TypeName;
 	readonly onMemory: TypeName;
 	readonly onDrive: TypeName;
+	readonly onEssence: TypeName;
 	readonly fling: any;
 	readonly naturalGift: any;
 	readonly isPokeball: boolean;
@@ -1216,6 +1217,7 @@ class Item implements Effect {
 		this.zMoveUser = data.zMoveUser || null;
 		this.onPlate = data.onPlate || '';
 		this.onMemory = data.onMemory || '';
+		this.onEssence = data.onEssence || '';
 		this.onDrive = data.onDrive || '';
 		this.fling = data.fling || null;
 		this.naturalGift = data.naturalGift || null;
