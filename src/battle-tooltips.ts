@@ -1471,6 +1471,7 @@ class BattleTooltips {
 		}
 		if (move.id === 'essenceburst' && item.onEssence) {
 			if (value.itemModify(0)) moveType = item.onEssence;
+
 		}
 		if (move.id === 'technoblast' && item.onDrive) {
 			if (value.itemModify(0)) moveType = item.onDrive;
@@ -1571,7 +1572,7 @@ class BattleTooltips {
 					if (value.abilityModify(0, 'Refrigerate')) moveType = 'Ice';
 					if (value.abilityModify(0, 'Illuminate')) moveType = 'Light';
 					if (value.abilityModify(0, 'Dragonheart')) moveType = 'Dragon';
-					if (value.abilityModify(0, 'Mind Over Matter') && this.battle.hasPseudoWeather('Psychic Terrain')) moveType = Psychic;
+					//if (value.abilityModify(0, 'Mind Over Matter') && this.battle.hasPseudoWeather('Psychic Terrain')) moveType = Psychic;
 				}
 				if (moveType === 'Fighting') {
 					if (value.abilityModify(0, 'Fiery Fists')) moveType = 'Fire';
