@@ -1824,7 +1824,7 @@ export class PokemonSprite extends Sprite {
 		throatchop: ['Throat Chop', 'bad'],
 		confusion: ['Confused', 'bad'],
 		healblock: ['Heal Block', 'bad'],
-		yawn: ['Drowsy', 'bad'],
+		yawn: ['Sleepy', 'bad'],
 		flashfire: ['Flash Fire', 'good'],
 		imprison: ['Imprisoning foe', 'good'],
 		autotomize: ['Lightened', 'neutral'],

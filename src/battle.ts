@@ -2620,7 +2620,7 @@ export class Battle {
 				this.scene.resultAnim(poke, 'Heal Block', 'bad');
 				break;
 			case 'yawn':
-				this.scene.resultAnim(poke, 'Drowsy', 'slp');
+				this.scene.resultAnim(poke, 'Sleepy', 'slp');
 				break;
 			case 'taunt':
 				this.scene.resultAnim(poke, 'Taunted', 'bad');
