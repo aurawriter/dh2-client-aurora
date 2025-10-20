@@ -691,7 +691,7 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	galacasthumid: 1596 + 59,
 	sneevil: 1596 + 60,
 	santai: 1596 + 61,
-        scabbardaunt: 1596 + 62,
+    scabbardaunt: 1596 + 62,
 	spiritombaurora:1596 + 63,
 	volkaison: 1596 + 64,
 	grizzweet: 1596 + 65,
@@ -704,6 +704,10 @@ const BattlePokemonIconIndexes: {[id: string]: number} = {
 	dratosphere: 1596 + 72,
 	aerora: 1596 + 73,
 	sovocteign: 1596 + 74,
+	amethix: 1596 + 75,
+	dryllor: 1596 + 76,
+	dalmaltian: 1596 + 77,
+	steerling: 1596 + 78,
 };
 
 const BattlePokemonIconIndexesLeft: {[id: string]: number} = {
