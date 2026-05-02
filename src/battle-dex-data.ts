@@ -1219,6 +1219,7 @@ class Item implements Effect {
 		this.zMoveType = data.zMoveType || '';
 		this.zMoveFrom = data.zMoveFrom || '';
 		this.zMoveUser = data.zMoveUser || null;
+		this.onEssence = data.onEssence || '';
 		this.onPlate = data.onPlate || '';
 		this.onMemory = data.onMemory || '';
 		this.onDrive = data.onDrive || '';
