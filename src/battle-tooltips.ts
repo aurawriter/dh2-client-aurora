@@ -1480,7 +1480,7 @@ class BattleTooltips {
 			if (value.itemModify(0)) moveType = item.naturalGift.type;
 		}
 		// Weather and pseudo-weather type changes.
-		if (move.id === 'weatherball' && value.weatherModify(0)) {
+		if ((move.id === 'weatherball'||move.id=='jetstream') && value.weatherModify(0)) {
 			switch (this.battle.weather) {
 			case 'sunnyday':
 			case 'desolateland':
@@ -1499,6 +1499,15 @@ class BattleTooltips {
 			case 'snow':
 				moveType = 'Ice';
 				break;
+			case 'gravity': 
+				moveType = 'Cosmic';
+				break;
+			case 'pollen':
+				moveType = 'Bug';
+				break;
+			case 'acidrain':
+				moveType = 'Poison';
+				break;
 			}
 		}
 		if (move.id === 'terrainpulse' && pokemon.isGrounded(serverPokemon)) {
@@ -1510,6 +1519,12 @@ class BattleTooltips {
 				moveType = 'Fairy';
 			} else if (this.battle.hasPseudoWeather('Psychic Terrain')) {
 				moveType = 'Psychic';
+			}
+			else if(this.battle.hasPseudoWeather('Draconic Terrain')) {
+				moveType = 'Dragon';
+			}
+			else if(this.battle.hasPseudoWeather('Haunted Terrain')) {
+				moveType = 'Ghost';
 			}
 		}
 		if (move.id === 'terablast' && pokemon.terastallized) {
